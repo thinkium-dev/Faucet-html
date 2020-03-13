@@ -1,5 +1,6 @@
 # Faucet-html
 
+> A Vue.js project
 
 ## Build Setup
 
