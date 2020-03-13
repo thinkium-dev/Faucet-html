@@ -80,11 +80,11 @@
       /*初始化数据*/
       initialization_data() {
         getalltokeninfo().then(response => {
-          this.value = "THK"
-          this.options.push({"lable": 0, "value": 'THK'})
-          response.forEach((item, index, self) => {
-            this.options.push({"lable": index + 1, "value": item.name})
-          })
+          this.value = "TKM"
+          this.options.push({"lable": 0, "value": 'TKM'})
+          // response.forEach((item, index, self) => {
+          //   this.options.push({"lable": index + 1, "value": item.name})
+          // })
         })
       },
       /*确认获取代币*/
@@ -97,8 +97,7 @@
           });
         } else {
           let data = {
-            "address": this.address,
-            "name": this.value
+            "to": this.address,
           }
           test(data).then(response => {
             console.log(response.eCode)
@@ -201,11 +200,13 @@
 
   .logo {
     display: inline-block;
-    width: 100px;
-    height: 50px;
+    width: 80px;
+/* margin-left: 100px; */
+    height: 80px;
     position: relative;
     top: 8px;
     background: url("../assets/images/logo_1.png") no-repeat;
+    background-size: 80% 80%;
   }
 
   .con_title {

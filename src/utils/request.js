@@ -2,7 +2,8 @@ import axios from 'axios'
 import {Message, MessageBox} from 'element-ui'
 // 创建axios实例
 const service = axios.create({
-  baseURL: 'http://' + window.location.host+'/v1/wallet/',
+  // baseURL: 'http://' + window.location.host+'/v1/wallet/',
+  baseURL: ' http://browser.thinkium.vip/PublicChainBrowser',
   timeout: 200000 // 请求超时时间
 })
 service.interceptors.response.use(
